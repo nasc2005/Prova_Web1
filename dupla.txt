@@ -1,0 +1,7 @@
+Gustavo Costa Oliveira
+
+Murilo Vieira Nascimento
+
+criar produto
+criar cliente
+listar cliente

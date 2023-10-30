@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>TECHRILO</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo">TECHRILO</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Usuario.html">Usuarios</a></li>
+        <li><a href="Produto.html">Produtos</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Usuario.html">Usuarios</a></li>
+        <li><a href="Produto.html">Produtos</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">Area do Produto</h1>
+      <div class="row center">
+      
+        <div class="row">
+          
+          <div id="listar">  
+            <form class="col s12 m12 card">
+              <div class="row">
+              <button type="submit" class="waves-effect waves-light btn" id="ListarPButton">Listar Todos Produtos</button>
+              <div id="usersList2">
+
+              </div>
+            </form>
+            </div>
+
+          <form class="col s12 m12 card" id="loginForm">
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="nome" type="text" >
+                <label for="nome">Nome do Produto</label>
+               </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="preco" type="number" class="validate">
+                <label for="preco">Preco</label>
+                <span class="helper-text" data-error="Errado" data-success="Correto">Helper text</span>
+              </div>
+            </div>
+            <div class="row">
+                  <div class="input-field col s12">
+                    <input id="QTD" type="number" >
+                    <label for="QTD">Quantidade</label>
+                  </div>
+            </div>
+
+            
+            <button type="submit" class="waves-effect waves-light btn" id="submitButton">Criar</button>
+            <a class="waves-effect waves-light btn">Cancelar</a>
+          </form>
+<hr>
+          <div id="users">  
+          <form class="col s6 m6 card">
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="selectPid" type="number" >
+                <label for="selectPid">ID</label>
+               </div>
+            <button type="submit" class="waves-effect waves-light btn" id="SelectPButton">Consultar</button>
+          </form>
+          </div>
+<hr>
+          <div id="delete">  
+            <form class="col s6 m6 card">
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="deletePid" type="number" >
+                  <label for="deletePid">ID</label>
+                 </div>
+  
+              <button type="submit" class="waves-effect waves-light btn" id="DeleteButton">deletar</button>
+            </form>
+            </div>
+
+            <div id="alterar">  
+              <form class="col s12 m12 card">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="updatePid" type="number" >
+                    <label for="updatePid">ID</label>
+                   </div>
+                   <div class="input-field col s12">
+                    <input id="nomePupdate" type="text" >
+                    <label for="nomePupdate">Nome</label>
+                   </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="emailPupdate" type="number" class="validate">
+                    <label for="emailPupdate">preco</label>
+                    <span class="helper-text" data-error="Errado" data-success="Correto">Helper text</span>
+                  </div>
+                </div>
+                <div class="row">
+                      <div class="input-field col s12">
+                        <input id="senhaPupdate" type="number" >
+                        <label for="senhaPupdate">Quantidade</label>
+                      </div>
+    
+                <button type="submit" class="waves-effect waves-light btn" id="UpdatePButton">Atualizar</button>
+              </form>
+              </div>
+        </div>
+        
+  
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">TECHRILO</h5>
+          <p class="grey-text text-lighten-4">A TECHRILO é uma empresa líder em inovação e tecnologia, dedicada a moldar o futuro digital. Com uma equipe de especialistas apaixonados e visionários, estamos comprometidos em transformar ideias ousadas em realidade.</p>
+
+
+        </div>
+        <div class="col l6 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="white-text" href="index.html">Home</a></li>
+            <li><a class="white-text" href="Usuario.html">Usuario</a></li>
+            <li><a class="white-text" href="Produto.html">Produtos</a></li>
+            <li><a class="white-text" href="backend/index.php">Teste</a></li>
+          </ul>
+        </div>
+    
+       
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="js/createProduct.js"></script>
+  <script src="js/selectProduct[.js"></script>
+  <script src="js/updateProduct.js"></script>
+  <script src="js/deleteProduct.js"></script>
+  <script src="js/listaProd.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
