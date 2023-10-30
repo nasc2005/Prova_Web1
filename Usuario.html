@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
   <title>TECHRILO</title>
   <link rel="stylesheet" href="css/leaflet.css" />
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.31/dist/sweetalert2.min.css" rel="stylesheet">
   <script src="js/leaflet.js"></script>
 
   <!-- CSS  -->
@@ -150,7 +151,28 @@
               </form>
               </div>
 
-        </div>
+              <div id="alterar">  
+                <form class="col s12 m12 card">
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="idUser" type="number" >
+                      <label for="idUser">ID</label>
+                     </div>
+                     <div class="input-field col s12">
+                      <input id="idProduto" type="number" >
+                      <label for="idProduto">ID</label>
+                     </div>
+      
+                  <button type="submit" class="waves-effect waves-light btn" id="VincularButton">Vincular</button>
+                </form>
+                </div>
+
+          
+              <div id="Grafico">  
+                <a href="grafico.html" class="waves-effect waves-light btn">Gráfico</a>
+              </div>
+
+            </div>
         
   
 
@@ -190,6 +212,7 @@
   <script src="js/updateUser.js"></script>
   <script src="js/deleteUser.js"></script>
   <script src="js/listaUser.js"></script>
+  <script src="js/VincularVenda.js"></script>
   <script src="js/mapa.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

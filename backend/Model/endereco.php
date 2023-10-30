@@ -1,120 +1,125 @@
 <?php
 
 namespace App\Model;
+use App\Model\Model;
+class Endereco{
+private int $id;
+private string $cep;
+private string $rua;
+private string $bairro;
+private string $cidade;
+private string $uf;
+private int $iduser;
+public $conn;
+public function __construct() {
+    $this->conn = new Model();
+    $this->conn->createTableFromModel($this);
+}
+/**
+ * Get the value of cep
+ */
+public function getCep()
+{
+return $this->cep;
+}
 
-class Endereco {
-  private $cep;
-  private $rua;
-  private $bairro;
-  private $cidade;
-  private $uf;
-  private $iduser;
+/**
+ * Set the value of cep
+ */
+public function setCep($cep): self
+{
+$this->cep = $cep;
 
-  /**
-   * Get the value of cep
-   */
-  public function getCep()
-  {
-    return $this->cep;
-  }
+return $this;
+}
 
-  /**
-   * Set the value of cep
-   */
-  public function setCep($cep): self
-  {
-    $this->cep = $cep;
+/**
+ * Get the value of rua
+ */
+public function getRua()
+{
+return $this->rua;
+}
 
-    return $this;
-  }
+/**
+ * Set the value of rua
+ */
+public function setRua($rua): self
+{
+$this->rua = $rua;
 
-  /**
-   * Get the value of rua
-   */
-  public function getRua()
-  {
-    return $this->rua;
-  }
+return $this;
+}
 
-  /**
-   * Set the value of rua
-   */
-  public function setRua($rua): self
-  {
-    $this->rua = $rua;
+/**
+ * Get the value of bairro
+ */
+public function getBairro()
+{
+return $this->bairro;
+}
 
-    return $this;
-  }
+/**
+ * Set the value of bairro
+ */
+public function setBairro($bairro): self
+{
+$this->bairro = $bairro;
 
-  /**
-   * Get the value of bairro
-   */
-  public function getBairro()
-  {
-    return $this->bairro;
-  }
+return $this;
+}
 
-  /**
-   * Set the value of bairro
-   */
-  public function setBairro($bairro): self
-  {
-    $this->bairro = $bairro;
+/**
+ * Get the value of cidade
+ */
+public function getCidade()
+{
+return $this->cidade;
+}
 
-    return $this;
-  }
+/**
+ * Set the value of cidade
+ */
+public function setCidade($cidade): self
+{
+$this->cidade = $cidade;
 
-  /**
-   * Get the value of cidade
-   */
-  public function getCidade()
-  {
-    return $this->cidade;
-  }
+return $this;
+}
 
-  /**
-   * Set the value of cidade
-   */
-  public function setCidade($cidade): self
-  {
-    $this->cidade = $cidade;
+/**
+ * Get the value of uf
+ */
+public function getUf()
+{
+return $this->uf;
+}
 
-    return $this;
-  }
+/**
+ * Set the value of uf
+ */
+public function setUf($uf): self
+{
+$this->uf = $uf;
 
-  /**
-   * Get the value of uf
-   */
-  public function getUf()
-  {
-    return $this->uf;
-  }
+return $this;
+}
 
-  /**
-   * Set the value of uf
-   */
-  public function setUf($uf): self
-  {
-    $this->uf = $uf;
+/**
+ * Get the value of iduser
+ */
+public function getIduser()
+{
+return $this->iduser;
+}
 
-    return $this;
-  }
+/**
+ * Set the value of iduser
+ */
+public function setIduser($iduser): self
+{
+$this->iduser = $iduser;
 
-  /**
-   * Get the value of iduser
-   */
-  public function getIduser()
-  {
-    return $this->iduser;
-  }
-
-  /**
-   * Set the value of iduser
-   */
-  public function setIduser($iduser): self
-  {
-    $this->iduser = $iduser;
-
-    return $this;
-  }
+return $this;
+}
 }

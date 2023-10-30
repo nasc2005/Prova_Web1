@@ -2,28 +2,28 @@
 
 namespace App\Controller;
 
+use App\Endereco\Endereco;
+use App\Controller\EnderecoController;
 use App\Model\Model;
 use App\Model\Usuario;
-use App\Model\Endereco;
-use App\Controller\EnderecoController;
-
-
 class UserController {
 
     private $db;
-    private $usuarios;
-    private $enderecos;
-    private $controllerenderecos;
-
+    private $usuario;
+    private $endereco;
     public function __construct() {
         $this->db = new Model();
-        $this->usuarios = new Usuario();
-        $this->enderecos = new Endereco();
-        //$this->db->ExcluirTabelaEndereco();
-        $this->db->criarTabelaEndereco();
+        $this->usuario = new Usuario();
+        $this->endereco = new Endereco();
+        
     }
     public function select(){
         $user = $this->db->select('users');
+        
+        return  $user;
+    }
+    public function selectIdade(){
+        $user = $this->db->select('idades');
         
         return  $user;
     }
@@ -33,24 +33,29 @@ class UserController {
         return  $user;
     }
     public function insert($data){
-        $this->usuarios->setNome($data['nome']);
-        $this->usuarios->setEmail($data['email']);
-        $this->usuarios->setSenha($data['senha']);
+        $this->usuario->setNome($data['nome']);
+        $this->usuario->setEmail($data['email']);
+        $this->usuario->setSenha($data['senha']);
+        $this->usuario->setDataNascimento($data['datanascimento']);
         if($this->db->insert('users', [
-        'nome'=> $this->usuarios->getNome(),
-        'email'=> $this->usuarios->getEmail(),
-        'senha'=> $this->usuarios->getSenha() ])){
-            $iduser=$this->db->getLastInsertID();
-            $this->enderecos->setCep($data['cep']);
-            $this->enderecos->setRua($data['rua']);
-            $this->enderecos->setBairro($data['bairro']);
-            $this->enderecos->setCidade($data['cidade']);
-            $this->enderecos->setUf($data['uf']);
-            $this->enderecos->setIduser($iduser);
-            $this->controllerenderecos = new EnderecoController($this->enderecos);
-            if($this->controllerenderecos->insert()) {
-                return true;
-            }
+            'nome'=> $this->usuario->getNome(),
+            'email'=> $this->usuario->getEmail(),
+            'senha'=> $this->usuario->getSenha(),
+            'datanascimento'=> $this->usuario->getDataNascimento(),
+
+                                                    ])){
+           
+           $this->endereco->setCep($data['cep']);
+           $this->endereco->setRua($data['rua']);
+           $this->endereco->setBairro($data['bairro']);
+           $this->endereco->setCidade($data['cidade']);
+           $this->endereco->setUf($data['uf']);
+           $this->endereco->setIduser($this->db->getLastInsertId());   
+           $enderecocontroller = new EnderecoController($this->endereco);                                
+           if($enderecocontroller->insert()){
+            return true;
+           }
+
         }
         return false;
     }
